@@ -10,13 +10,12 @@
 body {
     background-color: var(--main-color);
     color: var(--accent-color);
-    overflow: hidden;
+    overflow-x: clip;
     font-family: monospace;
 }
 .head{
     margin: auto;
     padding: 30px 90px 0px;
-    display: flex;
 }
 .head-c{
     background-color: var(--detail-color);
@@ -54,6 +53,7 @@ body {
     color: var(--accent-color);
 }
 
+
 .about{
     margin: auto;
     padding: 30px 90px 30px;
@@ -69,9 +69,19 @@ body {
     border-top: 16px solid var(--accent-color);
 }
 
-.about-c h1{
-    padding: 40px 40px;
+.about-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+.about-header h1{
     text-transform: uppercase;
+    
+}
+.image-icon{
+    width: 80px;
+    height: auto;
 }
 .about-text{
     padding: 0px 40px 40px;
@@ -84,16 +94,16 @@ body {
 .mission-c{
     background-color: var(--detail-color);
     margin: auto;
-    min-width: 600px;
-    max-width: 95%;
+    max-width: 47.5%;
     justify-content: space-between;
-
+    display: flex;
     border: 2px solid var(--accent-color);
     border-top: 16px solid var(--accent-color);
 }
 .mission-c h1{
     padding: 40px 40px;
     text-transform: uppercase;
+    display: flex;
     
 }
 .mission-text{
