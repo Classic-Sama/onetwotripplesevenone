@@ -12,6 +12,7 @@ body {
     color: var(--accent-color);
     overflow-x: clip;
     font-family: monospace;
+    
 }
 .head{
     margin: auto;
@@ -75,13 +76,11 @@ body {
     justify-content: space-between;
     padding: 40px;
 }
-.about-header h1{
-    text-transform: uppercase;
-    
-}
+
 .image-icon{
     width: 80px;
     height: auto;
+    opacity: 0.8;
 }
 .about-text{
     padding: 0px 40px 40px;
@@ -94,21 +93,19 @@ body {
 .mission-c{
     background-color: var(--detail-color);
     margin: auto;
-    max-width: 47.5%;
+    max-width: 95%;
     justify-content: space-between;
-    display: flex;
+
     border: 2px solid var(--accent-color);
     border-top: 16px solid var(--accent-color);
 }
 .mission-c h1{
     padding: 40px 40px;
     text-transform: uppercase;
-    display: flex;
     
 }
 .mission-text{
     padding: 0px 40px 40px;
-    display: flex;
 }
 
 
