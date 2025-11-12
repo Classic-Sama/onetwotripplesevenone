@@ -22,7 +22,7 @@ body {
     background-color: var(--detail-color);
     margin: auto;
     min-width: 600px;
-    max-width: 80%;
+    max-width: 95%;
     display: flex;
     justify-content: space-between
 }
@@ -62,7 +62,7 @@ body {
     background-color: var(--detail-color);
     margin: auto;
     min-width: 600px;
-    max-width: 80%;
+    max-width: 95%;
     justify-content: space-between;
     
     border: 2px solid var(--accent-color);
@@ -77,6 +77,29 @@ body {
     padding: 0px 40px 40px;
 }
 
+.mission{
+    margin: auto;
+    padding: 30px 90px 30px;
+}
+.mission-c{
+    background-color: var(--detail-color);
+    margin: auto;
+    min-width: 600px;
+    max-width: 95%;
+    justify-content: space-between;
+
+    border: 2px solid var(--accent-color);
+    border-top: 16px solid var(--accent-color);
+}
+.mission-c h1{
+    padding: 40px 40px;
+    text-transform: uppercase;
+    
+}
+.mission-text{
+    padding: 0px 40px 40px;
+    display: flex;
+}
 
 
 
