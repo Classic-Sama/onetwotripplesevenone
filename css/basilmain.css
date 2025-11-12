@@ -15,17 +15,21 @@ body {
 }
 .head{
     margin: auto;
-    padding: 30px 90px 30px;
+    padding: 30px 90px 0px;
     display: flex;
 }
 .head-c{
-    margin: auto;
     background-color: var(--detail-color);
+    margin: auto;
+    min-width: 600px;
+    max-width: 80%;
     display: flex;
+    justify-content: space-between
 }
 .title-of-page{
     text-decoration: none;
     padding-left: 40px;
+    max-width: 404px;
 }
 .nav{
     list-style: none;
@@ -40,11 +44,41 @@ body {
     text-decoration: none;
 }
 .nav-item-link:hover{
-    color: var(--hower-color)
+    color: var(--hower-color);
+}
+.nav-item-link:active{
+    color: var(--detail-color);
+    background-color: var(--hower-color);
 }
 .text-red{
-    color: var(--accent-color)
+    color: var(--accent-color);
 }
+
+.about{
+    margin: auto;
+    padding: 30px 90px 30px;
+}
+.about-c{
+    background-color: var(--detail-color);
+    margin: auto;
+    min-width: 600px;
+    max-width: 80%;
+    justify-content: space-between;
+    
+    border: 2px solid var(--accent-color);
+    border-top: 16px solid var(--accent-color);
+}
+
+.about-c h1{
+    padding: 40px 40px;
+    text-transform: uppercase;
+}
+.about-text{
+    padding: 0px 40px 40px;
+}
+
+
+
 
 .typing-line {
     position: absolute;
@@ -53,6 +87,6 @@ body {
     animation: fadeOut 10s linear forwards;
 }
 @keyframes fadeOut {
-    from {opacity: .5;}
+    from {opacity: .2;}
     to {opacity: 0;}
 }
