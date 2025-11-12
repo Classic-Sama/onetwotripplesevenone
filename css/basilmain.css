@@ -1,12 +1,48 @@
 :root {
-    --main-color: #000000;
+    --main-color: #040404;
     --detail-color: #161718;
     --accent-color: #c23608;
+    --highlight-color: #07d6d6;
     --hower-color: #fefefe;
 }
 *{
     box-sizing: border-box;
+    cursor: url("../images/cursour.png"), auto;
+    user-select: none;   
 }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.3) 0px,
+    rgba(0,0,0,.5) 1px,
+    transparent 5px
+  );
+  background-size: 100% 4px;
+  background-repeat: repeat;
+  background-position: 0 0;
+
+  mix-blend-mode: overlay;
+  opacity: 0.8;
+  animation: scanShift .5s linear infinite, flicker 0.15s infinite;
+}
+
+@keyframes scanShift {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 4px; }
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 0.8; }
+  20%, 24%, 55% { opacity: 0.6; }
+}
+
+
 body {
     background-color: var(--main-color);
     color: var(--accent-color);
@@ -14,6 +50,7 @@ body {
     font-family: monospace;
     
 }
+
 .head{
     margin: auto;
     padding: 30px 90px 0px;
@@ -38,14 +75,20 @@ body {
 }
 .nav-item{
     display: inline-block;
-
 }
-.nav-item-link{
+.nav-item-link {
     text-decoration: none;
+    background: linear-gradient(to right, var(--hower-color) 100%, var(--hower-color) 100%);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    color: transparent;
+    transition: background-size 0.5s ease;
 }
-.nav-item-link:hover{
-    color: var(--hower-color);
+
+.nav-item-link:hover {
+    background-size: 100% 100%;
 }
+
 .nav-item-link:active{
     color: var(--detail-color);
     background-color: var(--hower-color);
@@ -53,7 +96,9 @@ body {
 .text-red{
     color: var(--accent-color);
 }
-
+.text-blue{
+    color: var(--highlight-color);
+}
 
 .about{
     margin: auto;
@@ -87,13 +132,32 @@ body {
 }
 
 .mission{
+    max-width: 95%;
     margin: auto;
     padding: 30px 90px 30px;
+    display: flex;
+    justify-content: space-between
+    
+}
+.c1{
+    padding-right: 20px;
+}
+.c2{
+
 }
 .mission-c{
     background-color: var(--detail-color);
     margin: auto;
-    max-width: 95%;
+    height: 720px;
+    justify-content: space-between;
+
+    border: 2px solid var(--accent-color);
+    border-top: 16px solid var(--accent-color);
+}
+.mission-c1{
+    background-color: var(--detail-color);
+    margin: auto;
+    height: 720px;
     justify-content: space-between;
 
     border: 2px solid var(--accent-color);
@@ -101,7 +165,10 @@ body {
 }
 .mission-c h1{
     padding: 40px 40px;
-    text-transform: uppercase;
+    
+}
+.mission-c1 h1{
+    padding: 40px 40px;
     
 }
 .mission-text{
@@ -110,13 +177,15 @@ body {
 
 
 
+
 .typing-line {
+    color: var(--hower-color);
     position: absolute;
     white-space: nowrap;
     opacity: 0.8;
     animation: fadeOut 10s linear forwards;
 }
 @keyframes fadeOut {
-    from {opacity: .2;}
+    from {opacity: .6;}
     to {opacity: 0;}
 }
