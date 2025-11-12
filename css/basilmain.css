@@ -19,8 +19,8 @@ body::before {
 
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(255,255,255,0.3) 0px,
-    rgba(0,0,0,.5) 1px,
+    rgba(255,255,255,0.3) 1px,
+    rgba(0,0,0,.5) 2px,
     transparent 5px
   );
   background-size: 100% 4px;
@@ -84,10 +84,32 @@ body {
     color: transparent;
     transition: background-size 0.5s ease;
 }
-
 .nav-item-link:hover {
     background-size: 100% 100%;
 }
+.footer{
+    margin: auto;
+    padding: 0px 90px 50px;
+}
+.footer-c{
+    background-color: var(--detail-color);
+    margin: auto;
+    min-width: 600px;
+    max-width: 95%;
+    justify-content: space-between;
+    display: flex;
+    border: 2px solid var(--accent-color);
+    border-top: 16px solid var(--accent-color);
+}
+.footer-nav{
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.footer-nav-item{
+    
+}
+
 
 .nav-item-link:active{
     color: var(--detail-color);
@@ -175,7 +197,31 @@ body {
     padding: 0px 40px 40px;
 }
 
+.sorry{
+    max-width: 95%;
+    margin: auto;
+    padding: 30px 90px 30px;
+    display: flex;
+    justify-content: space-between
+}
+.sorry-c{
+    background-color: var(--detail-color);
+    margin: auto;
+    height: 720px;
+    justify-content: space-between;
 
+    border: 2px solid var(--accent-color);
+    border-top: 16px solid var(--accent-color);
+}
+.sorry-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+.sorry-text{
+    padding: 0px 40px 40px;
+}
 
 
 .typing-line {
