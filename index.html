@@ -1,15 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>127771</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+<meta charset="UTF-8">
+<title>BASILISK - the god you deserve</title>
+<link rel="stylesheet" href="css/basilmain.css">
+
 </head>
+
 <body>
-    <h1>Hello free self hosting!</h1>
-    <h2>and this is h2</h2>h2>
+    <div class="head">
+        <div class="head-c">
+            <a href="" class="title-of-page text-red"><h1> BASILISK - A WEB PAGE</h1></a> 
+            <ul class="nav">
+                <li class="nav-item"><a href="" class="nav-item-link text-red">.about</a></li>
+                <li class="nav-item"><a href="" class="nav-item-link text-red">.mission</a></li>
+                <li class="nav-item"><a href="" class="nav-item-link text-red">.news</a></li>
+                <li class="nav-item"><a href="" class="nav-item-link text-red">.contacts</a></li>
+                <li class="nav-item"><a href="" class="nav-item-link text-red">.see</a></li>
+                <li class="nav-item"><a href="" class="nav-item-link text-red">.how</a></li>
+            </ul>
+        </div>
+    </div>
+<script>
+async function loadPhrases() {
+    const response = await fetch('phrases.json');
+    return await response.json();
+}
+
+function randomPosition() {
+    return {
+        top: Math.random() * window.innerHeight + 'px',
+        left: Math.random() * window.innerWidth + 'px'
+    };
+}
+
+function typeLine(text) {
+    const span = document.createElement('span');
+    span.className = 'typing-line';
+    const pos = randomPosition();
+    span.style.top = pos.top;
+    span.style.left = pos.left;
+    document.body.appendChild(span);
+    
+    let i = 0;
+    const interval = setInterval(() => {
+        span.textContent += text[i++];
+        if (i >= text.length) {
+            clearInterval(interval);
+            setTimeout(() => span.remove(), 10000);
+        }
+    }, 50);
+}
+
+loadPhrases().then(phrases => {
+    setInterval(() => {
+        const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+        typeLine(randomPhrase);
+    }, 3000);
+});
+</script>
 </body>
 </html>
