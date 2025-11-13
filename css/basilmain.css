@@ -105,9 +105,6 @@ body {
     padding-left: 40px;
     padding-right: 40px;
 }
-.footer-nav-item{
-    
-}
 
 
 .nav-item-link:active{
@@ -119,6 +116,12 @@ body {
 }
 .text-blue{
     color: var(--highlight-color);
+}
+.text-black{
+    color: var(--detail-color);
+}
+.text-white{
+    color: var(--hower-color);
 }
 
 .about{
@@ -162,9 +165,6 @@ body {
 }
 .c1{
     padding-right: 20px;
-}
-.c2{
-
 }
 .mission-c{
     background-color: var(--detail-color);
@@ -319,6 +319,82 @@ body {
     transition: transform 0.1s ease;
     transform-style: preserve-3d;
     pointer-events: none; /* clicking closes outer layer */
+}
+
+
+.forum-info-panel{
+    max-width: 95%;
+    margin: auto;
+    padding: 30px 90px 0px;
+    justify-content: space-between
+
+}
+.forum-info-panel ps{
+    background-color: var(--accent-color);
+    padding-left: 2px;
+    padding-right: 5px;
+}
+.forum-info-panel p{
+    padding-left: 2px;
+    padding-right: 5px;
+    margin-left: auto;
+    font-size: 12px;
+}
+.forum-basilisk{
+    max-width: 95%;
+    margin: auto;
+    padding: 30px 90px 30px;
+    display: flex;
+    justify-content: space-between
+
+}
+.forum-userspace{
+    max-width: 95%;
+    margin: auto;
+    padding: 30px 90px 0px;
+    display: flex;
+    justify-content: space-between
+
+}
+
+.forum-body {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0; 
+}
+.forum-body-image{
+    border: 2px solid var(--accent-color);
+    height: 123px;
+    width: 123px;
+}
+.forum-body-info{
+    border: 2px solid var(--accent-color);
+    max-height: 123px;
+    min-width: 200px;
+    background-color: var(--detail-color);
+    flex: 1;
+
+}
+.forum-body-info-title, .forum-body-info-meta{
+    max-height: 61.5px;
+    background-color: var(--detail-color);
+    padding-left: 20px;
+}
+.forum-body-stats-boards, .forum-body-stats-individual-messages{
+    border: 2px solid var(--accent-color);
+    max-height: 123px;
+    background-color: var(--detail-color);
+    max-width: 121.7px;
+
+}
+.forum-body-stats-last-message{
+    border: 2px solid var(--accent-color);
+    max-height: 123px;
+    margin-left: auto;
+    width: 400px;
+    min-width: 200px;
+    background-color: var(--detail-color);
 }
 
 

@@ -1,5 +1,5 @@
 
-    document.querySelectorAll('.tilt-card').forEach(card => {
+document.querySelectorAll('.tilt-card').forEach(card => {
     const img = card.querySelector('img');
     card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
